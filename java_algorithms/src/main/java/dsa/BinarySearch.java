@@ -1,6 +1,6 @@
 package dsa;
 
-public class binarySearch {
+public class BinarySearch {
     public static void main(String[] args) {
         int[] data = {1,2,4,6,8,10,12,14,16};
         int no = 16;
