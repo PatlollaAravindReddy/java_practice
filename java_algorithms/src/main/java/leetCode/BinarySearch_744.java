@@ -21,7 +21,7 @@ public class BinarySearch_744 {
     static char nextGreatestLetterBs(char[] letters, char target) {
         // using binary search
         int left = 0;
-        int right = letters.length;
+        int right = letters.length - 1;
         while(left <= right) {
             int mid = left + (right - left) / 2;
             if(target < letters[mid]) {
