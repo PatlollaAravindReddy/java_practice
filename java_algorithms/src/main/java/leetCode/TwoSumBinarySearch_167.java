@@ -16,7 +16,7 @@ public class TwoSumBinarySearch_167 {
         while (i < j) {
             int mid = i + (j - i) / 2;
             if(nums[i] + nums[j] > target ) {
-                
+
             }
         }
         return results;
