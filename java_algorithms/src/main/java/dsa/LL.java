@@ -83,6 +83,20 @@ public class LL {
         temp.next = tempNode.next;
         size--;
     }
+
+    public void reverse() {
+        Node current = head;
+        Node previous = null;
+        Node next = null;
+        while(current != null) {
+            next = current.next;
+            current.next = previous;
+            previous = current;
+            current = next;
+        }
+        head = previous;
+    }
+
     public void display() {
         Node node = head;
         while (node != null) {

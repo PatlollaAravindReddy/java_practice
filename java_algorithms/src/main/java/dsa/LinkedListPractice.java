@@ -8,9 +8,10 @@ public class LinkedListPractice {
         llist.insertLast(6);
         llist.insertLast(8);
         llist.insert(10, 2);
-        llist.deleteFirst();
-        llist.deleteLast();
-        llist.delete(2);
+//        llist.deleteFirst();
+//        llist.deleteLast();
+//        llist.delete(2);
+        llist.reverse();
         llist.display();
     }
 }
