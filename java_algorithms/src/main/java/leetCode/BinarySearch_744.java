@@ -3,7 +3,7 @@ package leetCode;
 public class BinarySearch_744 {
     public static void main(String[] args) {
         char[] data = {'c','f','j'};
-        char target = 'c';
+        char target = 'z';
         //System.out.println(nextGreatestLetter(data, target));
         System.out.println(nextGreatestLetterBs(data, target));
     }
