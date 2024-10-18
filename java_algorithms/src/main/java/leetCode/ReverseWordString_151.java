@@ -10,12 +10,8 @@ public class ReverseWordString_151 {
         String[] data = s.split(" +");
         StringBuilder sb = new StringBuilder();
         for (int i = data.length - 1; i >= 0; i--) {
-            if(data[i].length() != 0) {
                 sb.append(data[i]);
-                if(i != 0) {
-                    sb.append(" ");
-                }
-            }
+                sb.append(" ");
         }
         return sb.toString().trim();
     }
