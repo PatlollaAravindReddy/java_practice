@@ -7,8 +7,7 @@ public class ReverseWordString_151 {
     }
 
     public static String reverseWords(String s) {
-        s = s.trim();
-        String[] data = s.split(" ");
+        String[] data = s.split(" +");
         StringBuilder sb = new StringBuilder();
         for (int i = data.length - 1; i >= 0; i--) {
             if(data[i].length() != 0) {
@@ -18,6 +17,6 @@ public class ReverseWordString_151 {
                 }
             }
         }
-        return sb.toString();
+        return sb.toString().trim();
     }
 }
