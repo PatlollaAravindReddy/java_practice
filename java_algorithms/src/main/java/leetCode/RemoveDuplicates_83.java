@@ -22,10 +22,11 @@ public class RemoveDuplicates_83 {
     public static void deleteDuplicates(node head) {
         node temp = head;
         while (temp != null && temp.next !=null) {
-            while(temp.next !=null && temp.val == temp.next.val) {
+            if(temp.val == temp.next.val) {
                 temp.next = temp.next.next;
+            } else {
+                temp = temp.next;
             }
-            temp = temp.next;
         }
     }
 }
