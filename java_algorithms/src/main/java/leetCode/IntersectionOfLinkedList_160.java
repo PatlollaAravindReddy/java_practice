@@ -25,6 +25,38 @@ public class IntersectionOfLinkedList_160 {
         head2.next.next.next.next = new Linkednode(4);
         head2.next.next.next.next.next = new Linkednode(5);
         getIntersectionNode(head, head2);
+        getIntersectionNode2(head, head2);
+    }
+
+    public static void getIntersectionNode2(Linkednode headA, Linkednode headB) {
+        int headASize = generateSize(headA);
+        int headBSize = generateSize(headB);
+
+        while(headASize > headBSize) {
+            headA = headA.next;
+            headASize--;
+        }
+
+        while (headASize < headBSize) {
+            headB = headB.next;
+            headBSize--;
+        }
+
+        while(headA != headB) {
+            headA = headA.next;
+            headB = headB.next;
+        }
+        System.out.println(headA);
+    }
+
+    static int generateSize(Linkednode headA) {
+        int size = 0;
+        Linkednode head = headA;
+        while(head != null) {
+            size++;
+            head = head.next;
+        }
+        return size;
     }
 
     public static void getIntersectionNode(Linkednode headA, Linkednode headB) {
