@@ -4,8 +4,29 @@ public class RemoveNnodeLinkedList_19 {
     public static void main(String[] args) {
         palindromeLL head = new palindromeLL(1);
         head.next = new palindromeLL(2);
-        int no = 2;
-        removeNnode(head, no);
+        head.next.next = new palindromeLL(3);
+        head.next.next.next = new palindromeLL(4);
+        head.next.next.next.next = new palindromeLL(5);
+        int no = 4;
+        //removeNnode(head, no);
+        removeNnode2(head, no);
+    }
+
+    public static void removeNnode2(palindromeLL head, int no) {
+        palindromeLL fast = head;
+        palindromeLL slow = head;
+        for(int i = 0; i< no; i++) {
+            fast = fast.next;
+        }
+        if(fast == null) {
+            //return head.next;
+        }
+        while(fast.next != null) {
+            slow = slow.next;
+            fast = fast.next;
+        }
+        slow.next = slow.next.next;
+        //return head;
     }
     public static void removeNnode(palindromeLL head, int no) {
         palindromeLL head2 = head;
