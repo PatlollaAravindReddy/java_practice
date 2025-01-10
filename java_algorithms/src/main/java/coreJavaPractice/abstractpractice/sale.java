@@ -1,8 +1,8 @@
-package coreJavaPractice.abstraction;
+package coreJavaPractice.abstractpractice;
 
 public class sale {
     public static void main(String[] args) {
-        laptop li = new lenovoimp();
+        lenovoimp li = new lenovoimp();
         li.copy();
         li.paste();
         li.cut();
