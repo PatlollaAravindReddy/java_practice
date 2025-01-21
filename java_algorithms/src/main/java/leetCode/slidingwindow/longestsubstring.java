@@ -18,16 +18,17 @@ public class longestsubstring {
         HashMap<Character, Integer> hm = new HashMap<Character, Integer>();
         for(int i = 0; i< data.length(); i++) {
             char currentChar = data.charAt(i);
+            String result = "";
             hm.put(currentChar, hm.getOrDefault(currentChar, 0) + 1);
             while (hm.size() > k ) {
-                String result = data.substring(left, i);
-                finalresult = finalresult.length() > result.length() ? finalresult : result;
+                result = data.substring(left, i);
                 hm.put(data.charAt(left), hm.get(data.charAt(left)) - 1);
                 if(hm.get(data.charAt(left)) == 0) {
                     hm.remove(data.charAt(left));
                 }
                 left = left + 1;
             }
+            finalresult = finalresult.length() > result.length() ? finalresult : result;
         }
         return finalresult;
     }
