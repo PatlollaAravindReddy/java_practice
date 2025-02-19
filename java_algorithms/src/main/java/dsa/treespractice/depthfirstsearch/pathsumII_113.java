@@ -1,9 +1,7 @@
-package dsa.treespractice.breadthfirstsearch.depthfirstsearch;
+package dsa.treespractice.depthfirstsearch;
 
-import com.sun.source.tree.Tree;
 import dsa.treespractice.breadthfirstsearch.TreeNode;
 
-import java.sql.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

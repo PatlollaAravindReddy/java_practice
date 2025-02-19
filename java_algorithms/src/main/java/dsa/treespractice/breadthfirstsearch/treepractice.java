@@ -1,8 +1,5 @@
 package dsa.treespractice.breadthfirstsearch;
 
-import java.util.LinkedList;
-import java.util.Queue;
-
 public class treepractice {
     public static void main(String[] args) {
         TreeNode tn = new TreeNode(10);

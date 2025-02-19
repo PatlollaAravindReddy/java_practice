@@ -1,4 +1,4 @@
-package dsa.treespractice.breadthfirstsearch.depthfirstsearch;
+package dsa.treespractice.depthfirstsearch;
 
 
 import dsa.treespractice.breadthfirstsearch.TreeNode;
@@ -20,7 +20,7 @@ public class pathsum_112 {
         if(tn == null) {
             return false;
         }
-        
+
         Stack<TreeNode> st = new Stack<>();
         Stack<TreeNode> sumst = new Stack<>();
         st.add(tn);
