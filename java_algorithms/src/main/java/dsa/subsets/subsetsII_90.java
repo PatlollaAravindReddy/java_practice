@@ -5,17 +5,16 @@ import java.util.*;
 public class subsetsII_90 {
     public static void main(String[] args) {
         int[] data = {1, 2, 2};
-        subsetHelper(data);
+        subsetHelper(data).stream().forEach(n -> System.out.println(n));
     }
 
-    static void subsetHelper(int[] data) {
+    static List<List<Integer>> subsetHelper(int[] data) {
         Arrays.sort(data);
         List<List<Integer>> ll = new ArrayList<>();
         ll.add(new ArrayList<>());
         int startIndex = 0, endIndex = 0;
         for(int i = 0; i < data.length; i++) {
             startIndex = 0;
-            int size = ll.size();
             if(i > 0 && data[i] == data[i - 1]) {
                 startIndex = endIndex + 1;
             }
